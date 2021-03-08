@@ -1,3 +1,51 @@
+@font-face {
+  font-family: "Raleway-Regular";
+  src: url("/webfonts/fa-regular-400.ttf");
+}
+* {
+  font-family: "Raleway-Regular", sans-serif;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+}
+.header_links a:hover {
+  text-decoration: overline;
+  color: blue;
+  padding-top: 20px;
+}
+.loc_bar {
+  display: flex;
+}
+.icon_map {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  font-size: 11px;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgrey;
+  border-radius: 10px 0 0px 10px;
+}
+.research_bar {
+  width: 100px;
+  height: 30px;
+  border: 0;
+  border-radius: 0 10px 10px 0;
+  background-color: blue;
+  color: white;
+}
+.text_bar {
+  width: 150px;
+  height: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  padding-left: 10px;
+}
+.filter {
+  display: flex;
+  justify-content: flex-start;
+}
 li {
   list-style-type: none;
 }
