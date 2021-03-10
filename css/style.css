@@ -2,18 +2,31 @@
 
 @font-face {
   font-family: "Raleway-Regular";
-  src: url("/webfonts/Raleway-Medium.ttf");
+  src: url("/webfonts/Raleway-Regular.ttf");
 }
 * {
   font-family: "Raleway-Regular", sans-serif;
-}
-body {
-  font-size: 16px;
   margin: 0;
-  padding: 5px;
+  padding: 0;
 }
 
-/* ----- Mise en page GRID page entière----- */
+/* ----- Mise en page balises générales ----- */
+
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+p {
+  font-size: 14px;
+}
+
+/* ----- Mise en page GRID ----- */
 
 .grid_block {
   display: grid;
@@ -22,32 +35,18 @@ body {
   grid-template-areas:
     "header header"
     "body sidebar"
-    "bbottom bbottom"
+    "bottom bottom"
     "footer footer";
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
+
+/* ----- Mise en page Header ----- */
+
 .header_block {
   grid-area: header;
-}
-.body_block {
-  grid-area: body;
-  background-color: chocolate;
-}
-.sidebar_block {
-  grid-area: sidebar;
-  background-color: darkcyan;
-}
-.activity_block {
-  grid-area: bbottom;
-  background-color: darksalmon;
-}
-.footer_block {
-  grid-area: footer;
-  background-color: darkslategrey;
-}
-
-/* ----- Mise en page GRID Header ----- */
-
-.header_block {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -58,65 +57,76 @@ body {
     "filter filter"
     "info .";
 }
+
+/* ----- Logo ----- */
+
 .logo {
   grid-area: logo;
+  margin: 40px 0;
 }
 .logo img {
-  width: 100px;
+  width: 85px;
   height: auto;
-  margin: -3px;
 }
+
+/* ----- Nav bar ----- */
+
 .nav_bar {
   display: flex;
   justify-content: flex-end;
 }
-.nav_bar li {
+.nav_bar a {
   height: 10px;
-  margin: 5px;
-  padding: 25px 5px 5px 5px;
+  margin: 20px 0;
+  padding: 40px 30px 5px;
 }
 .nav_bar a:visited {
   color: black;
 }
-.nav_bar li:hover {
-  border-top: 1px solid #0065fc;
-}
-.nav_bar li a:hover {
+.nav_bar a:hover {
+  border-top: 2px solid #0065fc;
   color: #0065fc;
 }
-li .register {
+.register {
+  color: #0065fc;
   font-weight: bold;
-  color: #deebff;
 }
+
 .header_text {
   grid-area: text;
 }
+
+/* ----- Search bar -----*/
+
 .search_bar {
   grid-area: search;
   display: flex;
-  margin: 5px 0;
+  margin: 15px 0;
 }
 .search_bar i {
   display: flex;
-  width: 40px;
-  height: 40px;
-  border-radius: 5px 0 0 5px;
+  width: 45px;
+  height: 45px;
+  border-radius: 15px 0 0 15px;
   background-color: #f2f2f2;
   align-items: center;
   justify-content: center;
 }
 input {
-  font-weight: bold;
-  font-size: 16px;
-  width: 225px;
+  font-weight: 900;
+  font-size: 18px;
+  width: 205px;
   border: 0.5px solid #f2f2f2;
-  padding-left: 10px;
+}
+.search {
+  padding-left: 14px;
 }
 .submit {
   background-color: #0065fc;
   font-size: 16px;
+  font-weight: 600;
   width: 125px;
-  height: 40px;
+  height: 45px;
   color: white;
   border: none;
   border-radius: 0 15px 15px 0;
@@ -128,85 +138,45 @@ input {
 
 /* ----- Mise en page Filter bar ----- */
 
-.filter_bar {
+.filters_bar {
   display: flex;
-  justify-content: start;
   align-items: center;
-  margin: 5px 0;
+  margin: 10px 0;
   grid-area: filter;
-}
-.filter_bar p {
   font-weight: bold;
-  margin-right: 20px;
 }
-.filter_bar li {
-  font-weight: bold;
-  margin-right: 10px;
-  padding-left: 10px;
+.filters_head {
+  margin: 0px 10px 0px 10px;
 }
-.eco {
+.filters_body {
   display: flex;
-  border: 1px solid #f2f2f2;
-  border-radius: 0 10px 10px 0;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
+  flex-wrap: wrap;
 }
-.eco i {
-  border: 1px solid #deebff;
-  border-radius: 50%;
+.filters {
+  margin-left: 25px;
+  border: 2px solid #f2f2f2;
+  border-radius: 20px;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+.icons i {
+  display: flex;
   background-color: #deebff;
   color: #0065fc;
-  font-size: 16px;
-  padding: 8px;
-}
-.fam {
-  display: flex;
-  border: 1px solid #f2f2f2;
-  border-radius: 0 10px 10px 0;
+  border: 2px solid #deebff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
   justify-content: center;
   align-items: center;
-  margin-right: 10px;
+  position: relative;
+  right: 2px;
 }
-.fam i {
-  border: 1px solid #deebff;
-  border-radius: 50%;
-  background-color: #deebff;
-  color: #0065fc;
-  font-size: 16px;
-  padding: 8px;
-}
-.rom {
-  display: flex;
-  border: 1px solid #f2f2f2;
-  border-radius: 0 10px 10px 0;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
-}
-.rom i {
-  border: 1px solid #deebff;
-  border-radius: 50%;
-  background-color: #deebff;
-  color: #0065fc;
-  font-size: 16px;
-  padding: 8px;
-}
-.ani {
-  display: flex;
-  border: 1px solid #f2f2f2;
-  border-radius: 0 10px 10px 0;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
-}
-.ani i {
-  border: 1px solid #deebff;
-  border-radius: 50%;
-  background-color: #deebff;
-  color: #0065fc;
-  font-size: 16px;
-  padding: 8px;
+.icons p {
+  margin: 0 25px 0 15px;
 }
 
 /* ----- Mise en page Info ----- */
@@ -215,35 +185,46 @@ input {
   display: flex;
   align-items: center;
   grid-area: info;
+  margin: 20px 0;
 }
 .info i {
+  display: flex;
   border: 1px solid #f2f2f2;
   color: #0065fc;
   border-radius: 50%;
-  margin-right: 5px;
+  margin: 0 5px 0 10px;
   padding: 4px;
-  font-size: 14px;
+  width: 8px;
+  height: 8px;
+  font-size: 8px;
   justify-content: center;
   align-items: center;
 }
 
-/* ----- Mise en page générale ----- */
+/* ----- Mise en page Main block ----- */
 
-li {
-  list-style-type: none;
+.body_block {
+  grid-area: body;
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
 }
-a {
-  text-decoration: none;
+.sidebar_block {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
 }
-h1 {
-  font-size: 20px;
-  margin: 0;
+.activity_block {
+  grid-area: bottom;
+  background-color: darksalmon;
 }
-p {
-  font-size: 14px;
-  margin: 4px 0;
-}
-.register a {
-  color: #0065fc;
-  font-weight: bold;
+
+/* ----- Mise en page Footer ----- */
+
+.footer_block {
+  grid-area: footer;
+  display: flex;
+  justify-content: flex-start;
+  background-color: darkslategrey;
 }

@@ -8,60 +8,92 @@
       Reservia - Trouvez votre hébergement pour des vacances de rêve
     </title>
   </head>
+
   <body>
     <div class="grid_block">
+      <!----- HEADER BLOCK ----->
+
+      <!----- Logo + Nav ----->
       <header class="header_block">
-        <div class="logo"><img src="images/logo/Reservia@3x.png" /></div>
+        <div class="logo">
+          <img src="images/logo/Reservia@3x.png" alt="Logo Reservia" />
+        </div>
         <nav class="nav_bar">
-          <li><a href="#lodging">Hébergements</a></li>
-          <li><a href="#activity">Activités</a></li>
-          <li class="register"><a href="inscription.html">S'inscrire</a></li>
+          <a href="#lodging">Hébergements</a>
+          <a href="#activity">Activités</a>
+          <a class="register" href="register.html">S'inscrire</a>
         </nav>
+        <!----- TXT ----->
         <div class="header_text">
           <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
           <p>En plein centre-ville ou en pleine nature</p>
         </div>
+        <!----- Search Bar ----->
         <div class="search_bar">
           <i class="fas fa-map-marker-alt"></i>
-          <input type="text" id="city" name="city" value="Marseille, France" />
+          <input
+            class="search"
+            type="search"
+            id="city"
+            name="city"
+            value="Marseille, France"
+          />
           <input class="submit" type="submit" value="Rechercher" />
         </div>
-        <nav class="filter_bar">
-          <p>Filtres</p>
-          <div class="eco">
-            <i class="fas fa-money-bill-wave"></i>
-            <li>Économique</li>
+        <!----- Filter Bar ----->
+        <nav class="filters_bar">
+          <div class="filters_head">
+            <p>Filtres</p>
           </div>
-          <div class="fam">
-            <i class="fas fa-child"></i>
-            <li>Familial</li>
-          </div>
-          <div class="rom">
-            <i class="fas fa-heart"></i>
-            <li>Romantique</li>
-          </div>
-          <div class="ani">
-            <i class="fas fa-dog"></i>
-            <li>Animaux autorisés</li>
+          <div class="filters_body">
+            <div class="filters">
+              <div class="icons">
+                <i class="fas fa-money-bill-wave"></i>
+                <p>Économique</p>
+              </div>
+            </div>
+            <div class="filters">
+              <div class="icons">
+                <i class="fas fa-child"></i>
+                <p>Familial</p>
+              </div>
+            </div>
+            <div class="filters">
+              <div class="icons">
+                <i class="fas fa-heart"></i>
+                <p>Romantique</p>
+              </div>
+            </div>
+            <div class="filters">
+              <div class="icons">
+                <i class="fas fa-dog"></i>
+                <p>Animaux autorisés</p>
+              </div>
+            </div>
           </div>
         </nav>
+        <!----- Info ----->
         <div class="info">
           <i class="fas fa-info"></i>
           <p>Plus de 500 logements sont disponibles dans cette ville</p>
         </div>
       </header>
+      <!---- Body Block ----->
       <article class="body_block">
         <h2><span id="lodging">Hébergements à Marseille</span></h2>
-        <a href="">Auberge la Cannebière</a>
-        <a href="">Hôtel du port</a>
-        <a href="">Hôtel Les mouettes</a>
-        <a href="">Hôtel de la mer</a>
-        <a href="">Auberge Le Panier</a>
-        <a href="">Hôtel chez Amina</a>
+        <li><a href="">Auberge la Cannebière</a></li>
+        <li><a href="">Hôtel du port</a></li>
+        <li><a href="">Hôtel Les mouettes</a></li>
+        <li><a href="">Hôtel de la mer</a></li>
+        <li><a href="">Auberge Le Panier</a></li>
+        <li><a href="">Hôtel chez Amina</a></li>
       </article>
       <article class="sidebar_block">
         <h2>Les plus populaires</h2>
         <i class="fas fa-chart-line"></i>
+        <li><a href="">Hôtel le soleil le matin</a></li>
+        <li><a href="">Au coeur de l'eau Chambres d'hôtes</a></li>
+        <li><a href="">Hôtel Tout bleu et blanc</a></li>
       </article>
       <article class="activity_block">
         <h2><span id="activity">Activités à Marseille</span></h2>
