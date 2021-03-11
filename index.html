@@ -15,19 +15,23 @@
 
       <!----- Logo + Nav ----->
       <header class="header_block">
-        <div class="logo">
-          <img src="images/logo/Reservia@3x.png" alt="Logo Reservia" />
+        <div class="header_logonav">
+          <div class="logo">
+            <img src="images/logo/Reservia.svg" alt="Logo Reservia" />
+          </div>
+          <nav class="nav_bar">
+            <a href="#lodging">Hébergements</a>
+            <a href="#activity">Activités</a>
+            <a class="register" href="register.html">S'inscrire</a>
+          </nav>
         </div>
-        <nav class="nav_bar">
-          <a href="#lodging">Hébergements</a>
-          <a href="#activity">Activités</a>
-          <a class="register" href="register.html">S'inscrire</a>
-        </nav>
+
         <!----- TXT ----->
         <div class="header_text">
           <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
           <p>En plein centre-ville ou en pleine nature</p>
         </div>
+
         <!----- Search Bar ----->
         <div class="search_bar">
           <i class="fas fa-map-marker-alt"></i>
@@ -40,6 +44,7 @@
           />
           <input class="submit" type="submit" value="Rechercher" />
         </div>
+
         <!----- Filter Bar ----->
         <nav class="filters_bar">
           <div class="filters_head">
@@ -72,29 +77,37 @@
             </div>
           </div>
         </nav>
+
         <!----- Info ----->
         <div class="info">
           <i class="fas fa-info"></i>
           <p>Plus de 500 logements sont disponibles dans cette ville</p>
         </div>
       </header>
+
       <!---- Body Block ----->
       <article class="body_block">
-        <h2><span id="lodging">Hébergements à Marseille</span></h2>
-        <li><a href="">Auberge la Cannebière</a></li>
-        <li><a href="">Hôtel du port</a></li>
-        <li><a href="">Hôtel Les mouettes</a></li>
-        <li><a href="">Hôtel de la mer</a></li>
-        <li><a href="">Auberge Le Panier</a></li>
-        <li><a href="">Hôtel chez Amina</a></li>
+        <div class="body_head">
+          <h2><span id="lodging">Hébergements à Marseille</span></h2>
+        </div>
+        <div class="section"><a href="">Auberge la Cannebière</a></div>
+        <div class="section"><a href="">Hôtel du port</a></div>
+        <div class="section"><a href="">Hôtel Les mouettes</a></div>
+        <div class="section"><a href="">Hôtel de la mer</a></div>
+        <div class="section"><a href="">Auberge Le Panier</a></div>
+        <div class="section"><a href="">Hôtel chez Amina</a></div>
       </article>
+
+      <!----- Sidebar Block ----->
       <article class="sidebar_block">
         <h2>Les plus populaires</h2>
         <i class="fas fa-chart-line"></i>
-        <li><a href="">Hôtel le soleil le matin</a></li>
-        <li><a href="">Au coeur de l'eau Chambres d'hôtes</a></li>
-        <li><a href="">Hôtel Tout bleu et blanc</a></li>
+        <a href="">Hôtel le soleil le matin</a>
+        <a href="">Au coeur de l'eau Chambres d'hôtes</a>
+        <a href="">Hôtel Tout bleu et blanc</a>
       </article>
+
+      <!----- Activity Block ----->
       <article class="activity_block">
         <h2><span id="activity">Activités à Marseille</span></h2>
         <a href="">Vieux Port</a>
@@ -105,27 +118,21 @@
         <a href="">Parc Lonchamps</a>
       </article>
       <footer class="footer_block">
-        <nav>
+        <nav class="about">
           <h3>A Propos</h3>
-          <ul>
-            <li>Fonctionnement du site</li>
-            <li>Conditions générales de vente</li>
-            <li>Données et confidentialité</li>
-          </ul>
+          <p>Fonctionnement du site</p>
+          <p>Conditions générales de vente</p>
+          <p>Données et confidentialité</p>
         </nav>
-        <nav>
+        <nav class="our_lodgings">
           <h3>Nos hébergements</h3>
-          <ul>
-            <li>Charte qualité</li>
-            <li>Soumettre votre hôtel</li>
-          </ul>
+          <p>Charte qualité</p>
+          <p>Soumettre votre hôtel</p>
         </nav>
-        <nav>
+        <nav class="help">
           <h3>Assistance</h3>
-          <ul>
-            <li>Centre d'aide</li>
-            <li>Nous contacter</li>
-          </ul>
+          <p>Centre d'aide</p>
+          <p>Nous contacter</p>
         </nav>
       </footer>
     </div>

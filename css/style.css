@@ -22,9 +22,6 @@ h1 {
   font-size: 20px;
   margin-bottom: 5px;
 }
-p {
-  font-size: 14px;
-}
 
 /* ----- Mise en page GRID ----- */
 
@@ -62,11 +59,10 @@ p {
 
 .logo {
   grid-area: logo;
-  margin: 40px 0;
+  margin: auto 0;
 }
 .logo img {
   width: 85px;
-  height: auto;
 }
 
 /* ----- Nav bar ----- */
@@ -76,24 +72,44 @@ p {
   justify-content: flex-end;
 }
 .nav_bar a {
-  height: 10px;
-  margin: 20px 0;
-  padding: 40px 30px 5px;
+  position: relative;
+  margin: auto 0;
+  padding: 0 25px;
 }
 .nav_bar a:visited {
   color: black;
 }
 .nav_bar a:hover {
-  border-top: 2px solid #0065fc;
   color: #0065fc;
+}
+.nav_bar a:hover::before {
+  height: 2px;
+  background-color: #0065fc;
+  position: absolute;
+  bottom: 45px;
+  left: 0px;
+  right: 0px;
+  content: "";
 }
 .register {
   color: #0065fc;
   font-weight: bold;
 }
 
+/* ----- Texte en-tête ----- */
+
 .header_text {
   grid-area: text;
+  font-size: 14px;
+}
+
+/* ----- Header Logo + Nav ----- */
+
+.header_logonav {
+  height: 80px;
+  grid-column: 1 / span 2;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* ----- Search bar -----*/
@@ -146,7 +162,7 @@ input {
   font-weight: bold;
 }
 .filters_head {
-  margin: 0px 10px 0px 10px;
+  margin: 0px 10px 0px 5px;
 }
 .filters_body {
   display: flex;
@@ -160,7 +176,7 @@ input {
 .icons {
   display: flex;
   align-items: center;
-  height: 30px;
+  height: 40px;
 }
 .icons i {
   display: flex;
@@ -168,15 +184,15 @@ input {
   color: #0065fc;
   border: 2px solid #deebff;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   justify-content: center;
   align-items: center;
   position: relative;
   right: 2px;
 }
 .icons p {
-  margin: 0 25px 0 15px;
+  margin: 0 15px 0 10px;
 }
 
 /* ----- Mise en page Info ----- */
@@ -185,20 +201,23 @@ input {
   display: flex;
   align-items: center;
   grid-area: info;
-  margin: 20px 0;
+  margin: 25px 0;
 }
 .info i {
   display: flex;
-  border: 1px solid #f2f2f2;
+  border: 2px solid #f2f2f2;
   color: #0065fc;
   border-radius: 50%;
-  margin: 0 5px 0 10px;
+  margin: 0 5px 0 0;
   padding: 4px;
-  width: 8px;
-  height: 8px;
-  font-size: 8px;
+  width: 12px;
+  height: 12px;
+  font-size: 12px;
   justify-content: center;
   align-items: center;
+}
+.info p {
+  font-size: 14px;
 }
 
 /* ----- Mise en page Main block ----- */
@@ -206,8 +225,10 @@ input {
 .body_block {
   grid-area: body;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   background-color: #f2f2f2;
+  border-radius: 20px;
 }
 .sidebar_block {
   grid-area: sidebar;
@@ -217,7 +238,6 @@ input {
 }
 .activity_block {
   grid-area: bottom;
-  background-color: darksalmon;
 }
 
 /* ----- Mise en page Footer ----- */
@@ -225,6 +245,15 @@ input {
 .footer_block {
   grid-area: footer;
   display: flex;
-  justify-content: flex-start;
-  background-color: darkslategrey;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+}
+.about {
+  text-align: left;
+}
+.our_lodgings {
+  text-align: left;
+}
+.help {
+  text-align: left;
 }
