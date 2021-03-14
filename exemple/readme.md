@@ -15,3 +15,4 @@ Questions :
 10. Afficher X pour revenir en arrière après affichage de la photo
 11. Mise en page exacte ? max width 1400+ ?
 12. gestion marge lodging title
+13. Nav bar li a / footer color + transform
