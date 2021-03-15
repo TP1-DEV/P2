@@ -11,3 +11,4 @@ Questions :
 6. Test remplissage barres filtres
 7. Question GRID tailles éléments auto
 8. Gestion hauteur largeur img / Mise au point identique à image ? Utilisation relatif/absolu ?
+9. Remove dir/files distant
