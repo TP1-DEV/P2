@@ -1,5 +1,9 @@
 /* ----- MARGE FONTS ----- */
-
+:root {
+  --main-color: #0065fc;
+  --alt-color: #deebff;
+  --bg-color: #f2f2f2;
+}
 @font-face {
   font-family: "Raleway-Regular";
   src: url("/webfonts/Raleway-Regular.ttf") format("truetype");
@@ -36,10 +40,10 @@ h1 {
   margin-top: auto;
 }
 .checked {
-  color: #0065fc;
+  color: var(--main-color);
 }
 .unchecked {
-  color: #f2f2f2;
+  color: var(--bg-color);
 }
 .price {
   font-weight: bold;
@@ -83,25 +87,25 @@ h1 {
   flex-basis: 50%;
 }
 .nav_bar_lodging {
-  border-bottom: 3px solid #0065fc;
+  border-bottom: 3px solid var(--main-color);
 }
 .nav_bar_activity {
-  border-bottom: 3px solid #f2f2f2;
+  border-bottom: 3px solid var(--bg-color);
 }
 .nav_bar_list a:hover {
   display: block;
-  color: #0065fc;
+  color: var(--main-color);
   transform: scale(1.05);
 }
 .nav_bar_list_selected {
-  color: #0065fc;
+  color: var(--main-color);
 }
 .register {
   display: flex;
   order: 2;
   margin-right: 20px;
   align-items: center;
-  color: #0065fc;
+  color: var(--main-color);
   font-weight: bold;
 }
 .register:hover {
@@ -133,7 +137,7 @@ h1 {
     left: -20px;
     right: -20px;
     bottom: 68px;
-    background-color: #0065fc;
+    background-color: var(--main-color);
   }
   .nav_bar_list_selected {
     color: unset;
@@ -188,7 +192,7 @@ h1 {
   width: 50px;
   height: 50px;
   border-radius: 15px 0 0 15px;
-  background-color: #f2f2f2;
+  background-color: var(--bg-color);
   align-items: center;
   justify-content: center;
 }
@@ -198,10 +202,10 @@ input {
   width: 240px;
   height: 50px;
   padding-left: 18px;
-  border: 0.5px solid #f2f2f2;
+  border: 0.5px solid var(--bg-color);
 }
 .button {
-  background-color: #0065fc;
+  background-color: var(--main-color);
   font-size: 16px;
   width: 50px;
   height: 50px;
@@ -249,7 +253,7 @@ input {
 }
 .filters {
   display: flex;
-  border: 3px solid #f2f2f2;
+  border: 3px solid var(--bg-color);
   border-radius: 30px;
   align-items: center;
   margin: 5px;
@@ -259,8 +263,8 @@ input {
 }
 .icons i {
   display: flex;
-  background-color: #deebff;
-  color: #0065fc;
+  background-color: var(--alt-color);
+  color: var(--main-color);
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -272,7 +276,7 @@ input {
   margin: 0 10px;
 }
 .filters:hover {
-  background-color: #f2f2f2;
+  background-color: var(--bg-color);
   border-radius: 30px;
   transform: scale(1.05);
 }
@@ -310,8 +314,8 @@ input {
 }
 .info i {
   display: flex;
-  border: 2px solid #f2f2f2;
-  color: #0065fc;
+  border: 2px solid var(--bg-color);
+  color: var(--main-color);
   border-radius: 50%;
   margin: 0 10px 0 0;
   width: 25px;
@@ -389,13 +393,15 @@ input {
   margin-top: 40px;
   cursor: pointer;
 }
+.lodging_foot a {
+  display: inline-block;
+}
 .lodging_foot a:hover {
-  display: block;
   transform: scale(1.05);
 }
 @media screen and (min-width: 576px) {
   .lodging_block {
-    background-color: #f2f2f2;
+    background-color: var(--bg-color);
     margin-top: 40px;
     border-radius: 20px;
   }
@@ -431,7 +437,7 @@ input {
 /* ----- SIDEBAR BLOCK ----- */
 
 .sidebar_block {
-  background-color: #f2f2f2;
+  background-color: var(--bg-color);
   padding: 20px;
   order: 1;
 }
@@ -607,7 +613,7 @@ input {
 /* ----- Mise en page Footer ----- */
 
 .footer_block {
-  background-color: #f2f2f2;
+  background-color: var(--bg-color);
   padding: 30px;
 }
 .footer_nav {
@@ -625,6 +631,7 @@ input {
 }
 @media screen and (min-width: 576px) {
   .footer_block {
+    box-sizing: border-box;
     padding: 40px;
   }
   .footer_nav_block {
