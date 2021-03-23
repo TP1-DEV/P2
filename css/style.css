@@ -563,7 +563,7 @@ input {
 @media screen and (min-width: 998px) {
   .activity_body {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 20px 20px 20px 1fr;
+    grid-template-rows: 200px 20px 20px 20px 200px;
     column-gap: 20px;
     row-gap: 0;
   }
@@ -593,16 +593,19 @@ input {
     flex-direction: column;
     height: 100%;
   }
-  .activity_box_title {
-    letter-spacing: unset;
+  .activity_box figure {
+    flex-grow: 1;
   }
   .activity_img {
-    flex-grow: 1;
+    min-height: 100%;
+  }
+  .activity_box_title {
+    letter-spacing: unset;
   }
 }
 @media screen and (min-width: 1280px) {
   .activity_body {
-    grid-template-rows: 1fr 40px 40px 40px 1fr;
+    grid-template-rows: 200px 40px 40px 40px 200px;
     column-gap: 40px;
   }
 }
