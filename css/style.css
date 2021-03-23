@@ -593,21 +593,11 @@ input {
     flex-direction: column;
     height: 100%;
   }
-  .activity_box figure {
-    flex-grow: 1;
-  }
   .activity_box_title {
     letter-spacing: unset;
   }
-  .activity_img.test1,
-  .activity_img.test2,
-  .activity_img.test3 {
-    height: 100%;
-  }
-  .activity_img.alt1,
-  .activity_img.alt2,
-  .activity_img.alt3 {
-    min-height: 100%;
+  .activity_img {
+    flex-grow: 1;
   }
 }
 @media screen and (min-width: 1280px) {
