@@ -7,7 +7,7 @@ Enfin, vous avez trouvé votre premier stage en tant que développeur web chez R
 
 Un nouveau design basé sur les principes du Material Design vient d’être proposé par Loïc, designer UI.
 
-![reservia]()
+![reservia](https://user-images.githubusercontent.com/79422739/117821054-7474f980-b26b-11eb-9e0b-b5b3f59e1b9a.png)
 
 ## Fonctionnalités
 
